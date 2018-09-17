@@ -5,6 +5,7 @@ gem 'bundler', '>= 1.8.4'
 gem 'rails', '4.2.5'
 # Repository for collecting Locale data for Ruby on Rails I18n as well as other interesting, Rails related I18n stuff 
 gem 'rails-i18n'
+# Bootstrap for rails
 gem 'rails-assets-bootstrap', '3.3.7', source: 'https://rails-assets.org'
 # Manage Procfile-based applications 
 gem 'foreman'
@@ -57,7 +58,6 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
