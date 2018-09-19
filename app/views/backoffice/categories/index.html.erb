@@ -7,6 +7,12 @@
                 <div class="panel panel-default">
                   <div class="panel-heading">
                       Categorias
+                      <%= link_to new_backoffice_category_path do %>
+                        <button type="button" class="btn btn-success btn-circle pull-right"
+                          style="margin-top: -5px">
+                          <i class="fa fa-plus"></i>
+                        </button>
+                      <% end %>
                   </div>
                   <!-- /.panel-heading -->
                   <div class="panel-body">
@@ -22,15 +28,17 @@
                               <tbody>
                                 <% @categories.each do |category| %> 
                                   <tr>
-                                    <td><%= category.id %></td>
+                                    <td style="width: 50px"><%= category.id %></td>
                                     <td><%= category.description %></td>
                                     <td style="width: 85px">
-                                      <button type="button" class="btn btn-warning 
-                                        btn-circle">
-                                        <i class="fa fa-edit"></i>
-                                      </button>
+                                      <%= link_to edit_backoffice_category_path(category.id) do %>
+                                        <button type="button" class="btn btn-warning 
+                                          btn-circle">
+                                          <i class="fa fa-edit"></i>
+                                        </button>
+                                      <% end %>
                                       <button type="button" class="btn btn-danger 
-                                        btn-circle">
+                                        btn-circle" disabled="disabled">
                                         <i class="fa fa-trash-o"></i>
                                       </button>
                                     </td>
