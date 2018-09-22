@@ -1,8 +1,8 @@
-<h1 class="page-header">Categorias</h1>
+<h1 class="page-header">Administradores</h1>
 <div class="panel panel-default">
   <div class="panel-heading">
-    Listando Categorias
-    <%= link_to new_backoffice_category_path do %>
+    Listando Administradores
+    <%= link_to new_backoffice_admin_path do %>
       <button type="button" class="btn btn-success btn-circle pull-right"
         style="margin-top: -5px">
         <i class="fa fa-plus"></i>
@@ -16,23 +16,23 @@
             <thead>
               <tr>
                 <th>#</th>
-                <th>Descrição</th>
+                <th>Email</th>
                 <th></th>
               </tr>
             </thead>
             <tbody>
-              <% @categories.each do |category| %> 
+              <% @admins.each do |admin| %> 
                 <tr>
-                  <td style="width: 50px"><%= category.id %></td>
-                  <td><%= category.description %></td>
+                  <td style="width: 50px"><%= admin.id %></td>
+                  <td><%= admin.email %></td>
                   <td style="width: 85px">
-                    <%= link_to edit_backoffice_category_path(category.id) do %>
+                    <%= link_to edit_backoffice_admin_path(admin.id) do %>
                       <button type="button" class="btn btn-warning 
                         btn-circle">
                         <i class="fa fa-edit"></i>
                       </button>
                     <% end %>
-                    <%= link_to backoffice_category_path(category.id), method: :delete, data: { confirm: 'Are you sure?' } do %>
+                    <%= link_to backoffice_admin_path(admin.id), method: :delete, data: { confirm: 'Are you sure?' } do %>
                       <button type="button" class="btn btn-danger 
                         btn-circle">
                         <i class="fa fa-trash-o"></i>

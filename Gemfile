@@ -7,6 +7,8 @@ gem 'rails', '4.2.5'
 gem 'rails-i18n'
 # Bootstrap for rails
 gem 'rails-assets-bootstrap', '3.3.7', source: 'https://rails-assets.org'
+## NotifyJS
+gem 'rails-assets-notifyjs', source: 'https://rails-assets.org'
 # Manage Procfile-based applications 
 gem 'foreman'
 # Flexible authentication solution for Rails with Warden.

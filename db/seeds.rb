@@ -21,5 +21,14 @@ categories.each do |category|
     Category.find_or_create_by(description: category)
 end
 
-
 puts "Cadastrando CATEGORIAS...[OK]"
+
+##################################
+
+puts "Cadastrando Administrador padrão..."
+
+Admin.create!(email: "admin@admin.com",
+              password: "123456",
+              password_confirmation: "123456")
+
+puts"Cadastrando Administrador padrão...[OK]"

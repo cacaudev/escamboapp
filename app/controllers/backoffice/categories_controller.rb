@@ -13,7 +13,7 @@ class Backoffice::CategoriesController < BackofficeController
     @category = Category.new(params_category)
     if @category.save
       redirect_to backoffice_categories_path, 
-        notice: "A categoria #{@category.description} foi cadastrada com sucesso"
+        notice: "A categoria (#{@category.description}) foi cadastrada com sucesso"
     else
       render :new
     end
@@ -26,7 +26,7 @@ class Backoffice::CategoriesController < BackofficeController
   def update
     if @category.update(params_category)
       redirect_to backoffice_categories_path, 
-        notice: "A categoria #{@category.description} foi editada com sucesso"
+        notice: "A categoria (#{@category.description}) foi editada com sucesso"
     else
       render :edit
     end
@@ -35,7 +35,7 @@ class Backoffice::CategoriesController < BackofficeController
   def destroy
     if @category.destroy
       redirect_to backoffice_categories_path, 
-        notice: "A categoria #{@category.description} foi deletada com sucesso"
+        notice: "A categoria (#{@category.description}) foi deletada com sucesso"
     else
       render :index
     end
