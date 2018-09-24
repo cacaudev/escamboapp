@@ -23,8 +23,11 @@ class Backoffice::AdminsController < BackofficeController
   end
   
   def update
-    passwd = params[:admin][:password]
-    passwd_confirmation = params[:admin][:password_confirmation]
+    # used params.dig(:anything inside params) for the first time :D
+    # can use with if too to check a bunch of them at the same time
+    # if params.dig(:one, :two, :three)
+    passwd = params.dig(:password)
+    passwd_confirmation = params.dig(:password_confirmation)
     
     if passwd.blank? && passwd_confirmation.blank?
       params[:admin].delete(:password)
@@ -40,9 +43,11 @@ class Backoffice::AdminsController < BackofficeController
   end
   
   def destroy
+    admin_email = @admin.email
+    
     if @admin.destroy
       redirect_to backoffice_admins_path, 
-        notice: "O Administrador (#{@admin.email}) foi deletado com sucesso"
+        notice: "O Administrador (#{admin_email}) foi excluído com sucesso"
     else
       render :index
     end
@@ -55,7 +60,7 @@ class Backoffice::AdminsController < BackofficeController
     end
     
     def params_admin
-      params.require(:admin).permit(:email, :password, :password_confirmation)
+      params.require(:admin).permit(:name, :email, :password, :password_confirmation)
     end
   
 end

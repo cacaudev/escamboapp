@@ -1,9 +1,5 @@
 # Trade App
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+    Trade app made in Ruby on Rails for an Udemy Course.
 
 ## Ruby version
     ruby 2.3.4p301 (2017-03-30 revision 58214) [x86_64-linux]

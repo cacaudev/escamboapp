@@ -12,37 +12,46 @@
   <!-- /.panel-heading -->
   <div class="panel-body">
       <div class="table-responsive">
-          <table class="table table-striped table-bordered table-hover">
-            <thead>
+        <table class="table table-striped table-bordered table-hover">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Nome</th>
+              <th>Email</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @admins.each do |admin| %> 
               <tr>
-                <th>#</th>
-                <th>Email</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              <% @admins.each do |admin| %> 
-                <tr>
-                  <td style="width: 50px"><%= admin.id %></td>
-                  <td><%= admin.email %></td>
-                  <td style="width: 85px">
-                    <%= link_to edit_backoffice_admin_path(admin.id) do %>
-                      <button type="button" class="btn btn-warning 
-                        btn-circle">
-                        <i class="fa fa-edit"></i>
-                      </button>
+                <td style="width: 50px"><%= admin.id %></td>
+                <td><%= admin.name %></td>
+                <td><%= admin.email %></td>
+                <td style="width: 85px">
+                  <%= link_to edit_backoffice_admin_path(admin.id) do %>
+                    <button type="button" class="btn btn-warning 
+                      btn-circle">
+                      <i class="fa fa-edit"></i>
+                    </button>
+                  <% end %>
+                  <% if current_admin.id != admin.id %>
+                    <%= link_to backoffice_admin_path(admin.id), 
+                      method: :delete, class: "btn btn-danger 
+                      btn-circle", data: { confirm: 
+                      "Quer mesmo excluir (<b>#{admin.email}</b>)?" } do %>
+                      <i class="fa fa-trash-o"></i>
                     <% end %>
-                    <%= link_to backoffice_admin_path(admin.id), method: :delete, data: { confirm: 'Are you sure?' } do %>
-                      <button type="button" class="btn btn-danger 
-                        btn-circle">
+                  <% else %>
+                    <%= link_to '#', class: "btn btn-danger 
+                        btn-circle", disabled: "disabled" do %>
                         <i class="fa fa-trash-o"></i>
-                      </button>
                     <% end %>
-                  </td>
-                </tr>
-              <% end %>
-            </tbody>
-          </table>
+                  <% end %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
       </div>
       <!-- /.table-responsive -->
   </div>

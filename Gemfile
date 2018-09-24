@@ -5,10 +5,16 @@ gem 'bundler', '>= 1.8.4'
 gem 'rails', '4.2.5'
 # Repository for collecting Locale data for Ruby on Rails I18n as well as other interesting, Rails related I18n stuff 
 gem 'rails-i18n'
-# Bootstrap for rails
-gem 'rails-assets-bootstrap', '3.3.7', source: 'https://rails-assets.org'
-## NotifyJS
-gem 'rails-assets-notifyjs', source: 'https://rails-assets.org'
+
+source 'https://rails-assets.org' do
+  # Bootstrap for rails
+  gem 'rails-assets-bootstrap', '3.3.7'
+  # NotifyJS
+  gem 'rails-assets-notifyjs'
+  # BootboxJS
+  gem 'rails-assets-bootbox'
+end
+
 # Manage Procfile-based applications 
 gem 'foreman'
 # Flexible authentication solution for Rails with Warden.
@@ -55,6 +61,8 @@ group :development, :test do
   gem 'quiet_assets'
   # Generate Entity-Relationship Diagrams for Rails applications 
   gem 'rails-erd'
+  # Fake info generator
+  gem 'faker'
 end
 
 group :development do
