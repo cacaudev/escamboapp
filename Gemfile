@@ -3,7 +3,8 @@ source 'https://rubygems.org'
 gem 'bundler', '>= 1.8.4'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
-# Repository for collecting Locale data for Ruby on Rails I18n as well as other interesting, Rails related I18n stuff 
+# Repository for collecting Locale data for Ruby on Rails I18n
+# as well as other interesting, Rails related I18n stuff
 gem 'rails-i18n'
 
 source 'https://rails-assets.org' do
@@ -15,7 +16,7 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-bootbox'
 end
 
-# Manage Procfile-based applications 
+# Manage Procfile-based applications
 gem 'foreman'
 # Flexible authentication solution for Rails with Warden.
 gem 'devise'
@@ -23,7 +24,7 @@ gem 'devise'
 gem 'devise-i18n'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
-# Rails gem of the template Bootstrap based admin theme SB Admin 2. 
+# Rails gem of the template Bootstrap based admin theme SB Admin 2
 gem 'bootstrap_sb_admin_base_v2'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -53,22 +54,26 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  # Call 'byebug' anywhere in the code to stop execution
+  # and get a debugger console
   gem 'byebug'
   # Better error page for Rack apps
   gem 'better_errors'
   # Mutes assets pipeline log messages
   gem 'quiet_assets'
-  # Generate Entity-Relationship Diagrams for Rails applications 
+  # Generate Entity-Relationship Diagrams for Rails applications
   gem 'rails-erd'
   # Fake info generator
   gem 'faker'
+  # A Ruby static code analyzer and formatter,
+  # based on the community Ruby style guide.
+  gem 'rubocop', '~> 0.59.2', require: false
 end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  # Spring speeds up development by keeping your application running in the
+  # background
   gem 'spring'
 end
-

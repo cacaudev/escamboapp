@@ -18,15 +18,17 @@
               <th>#</th>
               <th>Nome</th>
               <th>Email</th>
-              <th></th>
+              <th>Role</th>
+              <th>Ações</th>
             </tr>
           </thead>
           <tbody>
             <% @admins.each do |admin| %> 
               <tr>
-                <td style="width: 50px"><%= admin.id %></td>
+                <td style="width: 30px"><%= admin.id %></td>
                 <td><%= admin.name %></td>
                 <td><%= admin.email %></td>
+                <td><%= admin.role_translation %></td>
                 <td style="width: 85px">
                   <%= link_to edit_backoffice_admin_path(admin.id) do %>
                     <button type="button" class="btn btn-warning 
