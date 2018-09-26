@@ -14,6 +14,7 @@ class Admin < ActiveRecord::Base
   # Callbacks
 
   # Scopes
+  scope :with_full_access, -> { where(role: 'full_access') }
 
   # Class Methods
 
