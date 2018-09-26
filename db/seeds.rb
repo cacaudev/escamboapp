@@ -1,11 +1,7 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
-puts "Cadastrando CATEGORIAS..."
+
+puts "Registering Categories..."
 categories = [ "Animais e acessórios",
                "Esportes",
                "Para a sua casa",
@@ -18,14 +14,14 @@ categories = [ "Animais e acessórios",
                "Empregos e negócios"]
 
 categories.each do |category|
-    Category.find_or_create_by(description: category)
+  Category.find_or_create_by(description: category)
 end
 
-puts "Cadastrando CATEGORIAS...[OK]"
+puts "Registering Categories...[OK]"
 
 ##################################
 
-puts "Cadastrando Administrador padrão..."
+puts "Registering Default Admin..."
 
 Admin.create!(
   name: "Administrador Geral",
@@ -35,4 +31,4 @@ Admin.create!(
   role: 0
 )
 
-puts"Cadastrando Administrador padrão...[OK]"
+puts"Registering Default Admin...[OK]"
