@@ -1,5 +1,7 @@
 class Admin < ActiveRecord::Base
   # Includes
+  
+  # Enums
   enum role: [:full_access, :restricted_access]
 
   # Include default devise modules. Others available are:
@@ -14,17 +16,10 @@ class Admin < ActiveRecord::Base
   # Callbacks
 
   # Scopes
-  scope :with_full_access, -> { where(role: 'full_access') }
+  scope :with_full_access, -> { where(role: 0) }
+  scope :with_restricted_access, -> { where(role: 1) }
 
   # Class Methods
-
-  def role_translation
-    if self.role == 'full_access'
-      'Acesso Completo'
-    else
-      'Acesso Restrito'
-    end
-  end
 
   # Instances Methods
 

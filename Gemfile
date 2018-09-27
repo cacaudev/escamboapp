@@ -8,7 +8,7 @@ gem 'rails', '4.2.5'
 gem 'rails-i18n'
 
 source 'https://rails-assets.org' do
-  # Bootstrap for rails
+  # Bootstrap
   gem 'rails-assets-bootstrap', '3.3.7'
   # NotifyJS
   gem 'rails-assets-notifyjs'
@@ -22,6 +22,8 @@ gem 'foreman'
 gem 'devise'
 # Translations for the devise gem
 gem 'devise-i18n'
+# Help ActiveRecord::Enum feature to work fine with I18n and simple_form.
+gem 'enum_help'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Rails gem of the template Bootstrap based admin theme SB Admin 2

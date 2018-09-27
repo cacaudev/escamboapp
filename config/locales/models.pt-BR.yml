@@ -1,0 +1,32 @@
+'pt-BR':
+  activerecord:
+    models:
+      admin: 
+        one: Administrador
+        other: Administradores
+      ad: 
+        one: Anúncio
+        other: Anúncios
+      category:
+        one: Categoria
+        other: Categorias
+      member:
+        one: Usuário
+        other: Usuários
+    attributes:
+      admin:
+        id: Código
+        email: E-mail
+        name: Nome
+        role: Tipo de Acesso
+        password: Senha
+        password_confirmation: Confirmação de senha
+      ad:
+        title: Título
+        description: Descrição
+        member_id: Usuário
+        category_id: Categoria
+      category:
+        description: Descrição
+      member:
+        email: E-mail

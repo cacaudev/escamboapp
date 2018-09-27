@@ -28,7 +28,7 @@
                 <td style="width: 30px"><%= admin.id %></td>
                 <td><%= admin.name %></td>
                 <td><%= admin.email %></td>
-                <td><%= admin.role_translation %></td>
+                <td><%= admin.role_i18n %></td>
                 <td style="width: 85px">
                   <%= link_to edit_backoffice_admin_path(admin.id) do %>
                     <button type="button" class="btn btn-warning 
@@ -38,9 +38,9 @@
                   <% end %>
                   <% if current_admin.id != admin.id %>
                     <%= link_to backoffice_admin_path(admin.id), 
-                      method: :delete, class: "btn btn-danger 
-                      btn-circle", data: { confirm: 
-                      "Quer mesmo excluir (<b>#{admin.email}</b>)?" } do %>
+                      method: :delete, class: "btn btn-danger btn-circle",
+                      data: { confirm: t('messages.confirm_with', 
+                      item: admin.name)} do %>
                       <i class="fa fa-trash-o"></i>
                     <% end %>
                   <% else %>
