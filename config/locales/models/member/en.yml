@@ -1,0 +1,9 @@
+en:
+  activerecord:
+    models:
+      member:
+        one: User
+        other: Users
+    attributes:
+      member:
+        email: E-mail

@@ -1,0 +1,11 @@
+en:
+  messages:
+    confirm: Are yousure?
+    confirm_with: Are you sure you want to delete (<b>%{item}</b>)?
+    creating: New %{model}
+    listing: Listing %{model}
+    editing: Editing %{model}
+    errors: Errors
+    created: Item created successfully!
+    updated: Item updated successfully!
+    destroyed: Item deleted successfully!

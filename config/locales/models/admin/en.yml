@@ -1,0 +1,14 @@
+en:
+  activerecord:
+    models:
+      admin: 
+        one: Administrator
+        other: Administrators
+    attributes:
+      admin:
+        id: ID
+        email: E-mail
+        name: Name
+        role: Access Type
+        password: Password
+        password_confirmation: Password Confirmation

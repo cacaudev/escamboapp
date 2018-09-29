@@ -2,6 +2,7 @@
   messages:
     confirm: Tem certeza?
     confirm_with: Tem certeza que deseja excluir (<b>%{item}</b>)?
+    creating: Novo(a) %{model}
     listing: Listando %{model}
     editing: Editando %{model}
     errors: Erros

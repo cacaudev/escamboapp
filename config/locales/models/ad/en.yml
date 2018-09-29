@@ -1,0 +1,12 @@
+en:
+  activerecord:
+    models:
+      ad: 
+        one: Advertising
+        other: Advertisings
+    attributes:
+      ad:
+        title: Title
+        description: Description
+        member_id: User
+        category_id: Category

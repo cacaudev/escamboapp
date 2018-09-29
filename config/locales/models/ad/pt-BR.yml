@@ -1,0 +1,12 @@
+"pt-BR":
+  activerecord:
+    models:
+      ad: 
+        one: Anúncio
+        other: Anúncios
+    attributes:
+      ad:
+        title: Título
+        description: Descrição
+        member_id: Usuário
+        category_id: Categoria
