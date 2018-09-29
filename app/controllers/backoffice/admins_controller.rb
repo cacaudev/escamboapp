@@ -23,17 +23,14 @@ class Backoffice::AdminsController < BackofficeController
   end
 
   def update
-    # used params.dig(:anything inside params) for the first time :D
-    # can use with if too to check a bunch of them at the same time
-    # if params.dig(:one, :two, :three)
     passwd = params.dig(:password)
     passwd_confirmation = params.dig(:password_confirmation)
-
+  
     if passwd.blank? && passwd_confirmation.blank?
       params[:admin].delete(:password)
       params[:admin].delete(:password_confirmation)
     end
-
+    
     if @admin.update(params_admin)
       redirect_to backoffice_admins_path, 
         notice: "O Administrador (#{@admin.email}) foi editado com sucesso"

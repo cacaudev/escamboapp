@@ -28,6 +28,8 @@ gem 'enum_help'
 gem 'sqlite3'
 # Rails gem of the template Bootstrap based admin theme SB Admin 2
 gem 'bootstrap_sb_admin_base_v2'
+# Minimal authorization through OO design and pure Ruby classes
+gem "pundit"
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

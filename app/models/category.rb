@@ -4,7 +4,7 @@ class Category < ActiveRecord::Base
   # Associations
 
   # Validations
-    validates_presence_of :description
+  validates_presence_of :description
 
   # Callbacks
 
