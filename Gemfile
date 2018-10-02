@@ -3,9 +3,6 @@ source 'https://rubygems.org'
 gem 'bundler', '>= 1.8.4'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
-# Repository for collecting Locale data for Ruby on Rails I18n
-# as well as other interesting, Rails related I18n stuff
-gem 'rails-i18n'
 
 source 'https://rails-assets.org' do
   # Bootstrap
@@ -16,6 +13,9 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-bootbox'
 end
 
+# Repository for collecting Locale data for Ruby on Rails I18n
+# as well as other interesting, Rails related I18n stuff
+gem 'rails-i18n'
 # Manage Procfile-based applications
 gem 'foreman'
 # Flexible authentication solution for Rails with Warden.
@@ -42,7 +42,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+# gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.

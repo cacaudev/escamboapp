@@ -1,12 +1,18 @@
 class Backoffice::AdminsController < BackofficeController
   before_action :set_admin, only: [:edit, :update, :destroy]
+  after_action :verify_authorized, only: [:new, :destroy]
+  after_action :verify_policy_scoped, only: :index
 
+  # If the admin has full access he can see all other admins
+  # else only see other admins with restricted access
   def index
-    @admins = Admin.all
+    # @admins = Admin.with_full_access
+    @admins = policy_scope(Admin)
   end
 
   def new
     @admin = Admin.new
+    authorize @admin
   end
 
   def create
@@ -40,8 +46,9 @@ class Backoffice::AdminsController < BackofficeController
   end
 
   def destroy
+    authorize @admin
     admin_email = @admin.email
-    
+
     if @admin.destroy
       redirect_to backoffice_admins_path, 
         notice: "O Administrador (#{admin_email}) foi excluído com sucesso"
