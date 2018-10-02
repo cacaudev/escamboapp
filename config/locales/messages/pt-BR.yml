@@ -1,11 +1,13 @@
 'pt-BR':
   messages:
-    confirm: Tem certeza?
-    confirm_with: Tem certeza que deseja excluir (<b>%{item}</b>)?
-    creating: Novo(a) %{model}
-    listing: Listando %{model}
-    editing: Editando %{model}
+    confirm_alert: Tem certeza?
+    confirm_with_alert: Tem certeza que deseja excluir (<b>%{item}</b>)?
+    creating_label: Novo(a) %{model}
+    listing_label: Listando %{model}
+    editing_label: Editando %{model}
     errors: Erros
-    created: Item criado com sucesso!
-    updated: Item atualizado com sucesso!
-    destroyed: Item excluído com sucesso!
+    created_alert: Novo(a) %{item} criado com sucesso.
+    updated_alert: Item %{item} atualizado com sucesso.
+    deleted_alert: Item %{item} excluído com sucesso.
+    sign_in_succesfull_alert: Conectado com sucesso.
+    user_not_authorized: Você não está autorizado para fazer essa ação.

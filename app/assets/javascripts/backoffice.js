@@ -9,7 +9,7 @@ $.rails.allowAction = function(element) {
   if (!message) { return true; }
 
   var opts = {
-    title: "Confirmação",
+    title: "Confirmation",
     message: message,
     buttons: {
         confirm: {

@@ -15,7 +15,7 @@ class Backoffice::CategoriesController < BackofficeController
       render :new
     else
       redirect_to backoffice_categories_path, 
-      notice: "A categoria (#{@category.description}) foi cadastrada com sucesso"
+      notice: I18n.t('messages.created_alert', item: @category.description)
     end
   end
 
@@ -25,16 +25,17 @@ class Backoffice::CategoriesController < BackofficeController
   def update
     if @category.update(params_category)
       redirect_to backoffice_categories_path, 
-        notice: "A categoria (#{@category.description}) foi editada com sucesso"
+        notice: I18n.t('messages.updated_alert', item: @category.description)
     else
       render :edit
     end
   end
 
   def destroy
+    category_description = @category.description
     if @category.destroy
       redirect_to backoffice_categories_path, 
-        notice: "A categoria (#{@category.description}) foi deletada com sucesso"
+        notice: I18n.t('messages.deleted_alert', item: category_description)
     else
       render :index
     end

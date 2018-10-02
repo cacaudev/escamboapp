@@ -5,6 +5,10 @@ class AdminPolicy < ApplicationPolicy
     user.full_access?
   end
   
+  def edit?
+    user.full_access?
+  end
+  
   def destroy?
     user.full_access?
   end

@@ -1,16 +1,13 @@
 <h1 class="page-header"><%= @categories.model_name.human(count: 2) %></h1>
 <div class="panel panel-default">
   <div class="panel-heading">
-    <%= t('messages.listing', model: @categories.model_name.human(count: 2)) %>
+    <%= t('messages.listing_label', model: @categories.model_name.human(count: 2)) %>
     
-    <% if policy(@admins).new? %>
-      <%= link_to new_backoffice_admin_path, class:"btn btn-success btn-circle pull-right", style:"margin-top: -5px" do %>
-          <i class="fa fa-plus"></i>
-      <% end %>
-    <% else %>
-      <%= link_to '#', disabled: 'disabled', class:"btn btn-success btn-circle pull-right", style:"margin-top: -5px" do %>
-          <i class="fa fa-plus"></i>
-      <% end %>
+    <%= link_to new_backoffice_category_path do %>
+      <button type="button" class="btn btn-success btn-circle pull-right"
+        style="margin-top: -5px">
+        <i class="fa fa-plus"></i>
+      </button>
     <% end %>
     
   </div>
@@ -37,7 +34,9 @@
                         <i class="fa fa-edit"></i>
                       </button>
                     <% end %>
-                    <%= link_to backoffice_category_path(category.id), method: :delete, data: { confirm: 'Are you sure?' } do %>
+                    <%= link_to backoffice_category_path(category.id), 
+                      method: :delete, 
+                      data: { confirm: I18n.t('messages.confirm_with_alert', item: category.description) } do %>
                       <button type="button" class="btn btn-danger 
                         btn-circle">
                         <i class="fa fa-trash-o"></i>

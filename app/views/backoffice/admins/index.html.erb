@@ -1,13 +1,18 @@
 <h1 class="page-header"><%= @admins.model.model_name.human(count: 2) %></h1>
 <div class="panel panel-default">
   <div class="panel-heading">
-    <%= t('messages.listing', model: @admins.model.model_name.human(count: 2)) %>
-    <%= link_to new_backoffice_admin_path do %>
-      <button type="button" class="btn btn-success btn-circle pull-right"
-        style="margin-top: -5px">
-        <i class="fa fa-plus"></i>
-      </button>
+    <%= t('messages.listing_label', model: @admins.model.model_name.human(count: 2)) %>
+
+    <% if policy(@admins).new? %>
+      <%= link_to new_backoffice_admin_path, class:"btn btn-success btn-circle pull-right", style:"margin-top: -5px" do %>
+          <i class="fa fa-plus"></i>
+      <% end %>
+    <% else %>
+      <%= link_to '#', disabled: 'disabled', class:"btn btn-success btn-circle pull-right", style:"margin-top: -5px" do %>
+          <i class="fa fa-plus"></i>
+      <% end %>
     <% end %>
+
   </div>
   <!-- /.panel-heading -->
   <div class="panel-body">
@@ -30,16 +35,23 @@
                 <td><%= admin.email %></td>
                 <td><%= admin.role_i18n %></td>
                 <td style="width: 85px">
-                  <%= link_to edit_backoffice_admin_path(admin.id) do %>
-                    <button type="button" class="btn btn-warning 
-                      btn-circle">
+                  
+                  <% if policy(@admins).edit?  %>
+                    <%= link_to edit_backoffice_admin_path(admin.id), 
+                      class:"btn btn-warning btn-circle" do %>
                       <i class="fa fa-edit"></i>
-                    </button>
+                    <% end %>
+                  <% else %>
+                    <%= link_to '#', disabled: 'disabled', 
+                      class:"btn btn-warning btn-circle" do %>
+                      <i class="fa fa-edit"></i>
+                    <% end %>
                   <% end %>
-                  <% if current_admin.id != admin.id %>
+                  
+                  <% if policy(@admins).destroy? %>
                     <%= link_to backoffice_admin_path(admin.id), 
                       method: :delete, class: "btn btn-danger btn-circle",
-                      data: { confirm: t('messages.confirm_with', 
+                      data: { confirm: t('messages.confirm_with_alert', 
                       item: admin.name)} do %>
                       <i class="fa fa-trash-o"></i>
                     <% end %>
