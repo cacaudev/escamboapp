@@ -9,6 +9,9 @@
 
 ## System dependencies
 
+## Entity-Relation Diagram
+![alt text](https://github.com/cacaudev/escamboapp/blob/master/erd.png)
+
 ## Configuration
   Running the server:
   $ foreman start
