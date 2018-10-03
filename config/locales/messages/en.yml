@@ -11,3 +11,5 @@ en:
     deleted_alert: Item %{item} deleted successfully.
     sign_in_succesfull_alert: Signed in successfully.
     user_not_authorized: You are authorized to perform this action.
+    sign_in_label: Sign In
+    remember_me_label: Remember me

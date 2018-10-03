@@ -11,3 +11,5 @@
     deleted_alert: Item %{item} excluído com sucesso.
     sign_in_succesfull_alert: Conectado com sucesso.
     user_not_authorized: Você não está autorizado para fazer essa ação.
+    sign_in_label: Identifique-se
+    remember_me_label: Lembrar-se de mim
