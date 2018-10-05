@@ -35,17 +35,10 @@
                 <td><%= admin.email %></td>
                 <td><%= admin.role_i18n %></td>
                 <td style="width: 85px">
-                  
-                  <% if policy(@admins).edit?  %>
-                    <%= link_to edit_backoffice_admin_path(admin.id), 
-                      class:"btn btn-warning btn-circle" do %>
-                      <i class="fa fa-edit"></i>
-                    <% end %>
-                  <% else %>
-                    <%= link_to '#', disabled: 'disabled', 
-                      class:"btn btn-warning btn-circle" do %>
-                      <i class="fa fa-edit"></i>
-                    <% end %>
+                
+                  <%= link_to edit_backoffice_admin_path(admin.id), 
+                    class:"btn btn-warning btn-circle" do %>
+                    <i class="fa fa-edit"></i>
                   <% end %>
                   
                   <% if policy(@admins).destroy? %>
