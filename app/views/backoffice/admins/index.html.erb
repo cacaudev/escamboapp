@@ -41,7 +41,7 @@
                     <i class="fa fa-edit"></i>
                   <% end %>
                   
-                  <% if policy(@admins).destroy? %>
+                  <% if (current_admin.id != admin.id) && policy(@admins).destroy? %>
                     <%= link_to backoffice_admin_path(admin.id), 
                       method: :delete, class: "btn btn-danger btn-circle",
                       data: { confirm: t('messages.confirm_with_alert', 
