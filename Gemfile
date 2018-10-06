@@ -80,4 +80,5 @@ group :development do
   # Spring speeds up development by keeping your application running in the
   # background
   gem 'spring'
+  gem 'mailcatcher'
 end

@@ -38,6 +38,7 @@ class Backoffice::AdminsController < BackofficeController
     end
     
     if @admin.update(params_admin)
+      AdminMailer.update_email(current_admin, @admin).deliver_now
       redirect_to backoffice_admins_path, 
         notice: t('messages.updated_alert', item: @admin.email)
     else
