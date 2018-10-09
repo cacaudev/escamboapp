@@ -22,11 +22,3 @@
 ## Database initialization
   Only in development (will call all tasks above once):
   $ rake utils:rebuild_db  
-
-## How to run the test suite
-
-## Services (job queues, cache servers, search engines, etc.)
-
-## Deployment instructions
-
-## ...
