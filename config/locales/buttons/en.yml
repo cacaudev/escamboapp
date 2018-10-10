@@ -4,3 +4,7 @@ en:
     home_page: Home
     back: Back
     log_in: Log In
+    add: Create %{model}
+    edit: Edit
+    delete: Delete
+    send_email: Send Mail

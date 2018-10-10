@@ -4,12 +4,17 @@
     <%= t('messages.listing_label', model: @admins.model.model_name.human(count: 2)) %>
 
     <% if policy(@admins).new? %>
-      <%= link_to new_backoffice_admin_path, class:"btn btn-success btn-circle pull-right", style:"margin-top: -5px" do %>
-          <i class="fa fa-plus"></i>
+      <%= link_to new_backoffice_admin_path, 
+        title: t('buttons.add', model: @admins.model.model_name),
+        class:"btn btn-success btn-circle pull-right", 
+        style:"margin-top: -5px" do %>
+        <i class="fa fa-plus"></i>
       <% end %>
     <% else %>
-      <%= link_to '#', disabled: 'disabled', class:"btn btn-success btn-circle pull-right", style:"margin-top: -5px" do %>
-          <i class="fa fa-plus"></i>
+      <%= link_to '#', disabled: 'disabled', 
+        class:"btn btn-success btn-circle pull-right", 
+        style:"margin-top: -5px" do %>
+        <i class="fa fa-plus"></i>
       <% end %>
     <% end %>
 
@@ -35,27 +40,29 @@
                 <td><%= admin.email %></td>
                 <td><%= admin.role_i18n %></td>
                 <td style="width: 115px">
-                  <%= link_to '#', 
-                    class:"btn btn-info btn-circle",
-                    data: {toggle: 'modal', target: '#sendMailModal'} do %>
+                 
+                  <%= link_to edit_backoffice_send_mail_path(admin.id), 
+                    class:"btn btn-info btn-circle", 
+                    title: t('buttons.send_email'), remote: true do %>
                     <i class="fa fa-envelope"></i>
                   <% end %>
                 
                   <%= link_to edit_backoffice_admin_path(admin.id), 
-                    class:"btn btn-warning btn-circle" do %>
+                    title: t('buttons.edit'), class:"btn btn-warning btn-circle" do %>
                     <i class="fa fa-edit"></i>
                   <% end %>
                   
                   <% if (current_admin.id != admin.id) && policy(@admins).destroy? %>
                     <%= link_to backoffice_admin_path(admin.id), 
+                      title: t('buttons.delete'),
                       method: :delete, class: "btn btn-danger btn-circle",
                       data: { confirm: t('messages.confirm_with_alert', 
                       item: admin.name)} do %>
                       <i class="fa fa-trash-o"></i>
                     <% end %>
                   <% else %>
-                    <%= link_to '#', class: "btn btn-danger 
-                        btn-circle", disabled: "disabled" do %>
+                    <%= link_to '#', class: "btn btn-danger btn-circle",
+                      title: t('buttons.delete'), disabled: "disabled" do %>
                         <i class="fa fa-trash-o"></i>
                     <% end %>
                   <% end %>

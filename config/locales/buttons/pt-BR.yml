@@ -4,3 +4,7 @@
     home_page: Página Principal
     back: Voltar
     log_in: Entrar
+    add: Criar %{model}
+    edit: Editar
+    delete: Deletar
+    send_email: Enviar Email
