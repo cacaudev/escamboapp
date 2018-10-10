@@ -34,7 +34,12 @@
                 <td><%= admin.name %></td>
                 <td><%= admin.email %></td>
                 <td><%= admin.role_i18n %></td>
-                <td style="width: 85px">
+                <td style="width: 115px">
+                  <%= link_to '#', 
+                    class:"btn btn-info btn-circle",
+                    data: {toggle: 'modal', target: '#sendMailModal'} do %>
+                    <i class="fa fa-envelope"></i>
+                  <% end %>
                 
                   <%= link_to edit_backoffice_admin_path(admin.id), 
                     class:"btn btn-warning btn-circle" do %>
@@ -65,3 +70,5 @@
   <!-- /.panel-body -->
 </div>
 <!-- /.panel -->
+
+<%= render partial: 'backoffice/admins/shared/send_mail_modal' %>
