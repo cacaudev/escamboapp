@@ -29,14 +29,6 @@ class Backoffice::AdminsController < BackofficeController
   end
 
   def update
-    passwd = params.dig(:password)
-    passwd_confirmation = params.dig(:password_confirmation)
-  
-    if passwd.blank? && passwd_confirmation.blank?
-      params[:admin].delete(:password)
-      params[:admin].delete(:password_confirmation)
-    end
-    
     if @admin.update(params_admin)
       AdminMailer.update_email(current_admin, @admin).deliver_now
       redirect_to backoffice_admins_path, 
@@ -65,7 +57,21 @@ class Backoffice::AdminsController < BackofficeController
     end
 
     def params_admin
-      params.require(:admin).permit(policy(@admin).permitted_attributes)
+      if password_blank?
+        params[:admin].except!(:password, :password_confirmation)
+      end
+
+      if @admin.blank?
+        params.require(:admin)
+          .permit(:name, :email, :role, :password, :password_confirmation)
+      else
+        params.require(:admin).permit(policy(@admin).permitted_attributes)
+      end
+    end
+
+    def password_blank?
+      passwd = params.dig(:password) &&
+      passwd_confirmation = params.dig(:password_confirmation)
     end
 
 end
