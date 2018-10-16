@@ -1,10 +1,11 @@
 en:
   buttons:
-    submit: Submit
-    home_page: Home
-    back: Back
-    log_in: Log In
-    add: Create %{model}
-    edit: Edit
-    delete: Delete
-    send_email: Send Mail
+    submit_button: Submit
+    home_page_button: Home
+    back_button: Back
+    log_in_button: Log In
+    add_model_button: Create %{model}
+    edit_button: Edit
+    delete_button: Delete
+    send_email_button: Send Mail
+    close_button: Close

@@ -1,0 +1,14 @@
+'pt-BR':
+  labels:
+    creating_label: Novo(a) %{model}
+    listing_label: Listando %{model}
+    editing_label: Editando %{model}
+    remember_me_label: Lembrar-se de mim
+    sign_in_label: Identifique-se
+    sign_up_label: Cadastre-se
+    recipient_label: Destinatário
+    subject_label: Assunto
+    message_label: Mensagem
+    new_message_to_label: Nova mensagem para %{name}
+    send_label: Enviar
+    errors_label: Erros

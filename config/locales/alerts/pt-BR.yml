@@ -1,15 +1,12 @@
 'pt-BR':
-  messages:
+  alerts:
     confirm_alert: Tem certeza?
     confirm_with_alert: Tem certeza que deseja excluir (<b>%{item}</b>)?
-    creating_label: Novo(a) %{model}
-    listing_label: Listando %{model}
-    editing_label: Editando %{model}
-    errors: Erros
     created_alert: Novo(a) %{item} criado com sucesso.
     updated_alert: Item %{item} atualizado com sucesso.
     deleted_alert: Item %{item} excluído com sucesso.
     sign_in_succesfull_alert: Conectado com sucesso.
-    user_not_authorized: Você não está autorizado para fazer essa ação.
-    sign_in_label: Identifique-se
-    remember_me_label: Lembrar-se de mim
+    user_not_authorized_alert: Você não está autorizado para fazer essa ação.
+    email_sent_sucessfully_alert: Email enviado com sucesso.
+    email_error_alert: Erro ao tentar enviar email.
+    your_data_has_been_changed_alert: Seus dados foram alterados.

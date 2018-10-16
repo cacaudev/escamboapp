@@ -1,15 +1,12 @@
 en:
-  messages:
+  alerts:
     confirm_alert: Are you sure?
     confirm_with_alert: Are you sure you want to delete (<b>%{item}</b>)?
-    creating_label: New %{model}
-    listing_label: Listing %{model}
-    editing_label: Editing %{model}
-    remember_me_label: Remember me
-    errors: Errors
     created_alert: New %{item} created successfully.
     updated_alert: Item %{item} updated successfully.
     deleted_alert: Item %{item} deleted successfully.
     sign_in_succesfull_alert: Signed in successfully.
-    user_not_authorized: You are authorized to perform this action.
-    sign_in_label: Sign In
+    user_not_authorized_alert: You are authorized to perform this action.
+    email_sent_sucessfully_alert: Email sent successfuly.
+    email_error_alert: Error occur trying to send email.
+    your_data_has_been_changed_alert: Your data has been changed.

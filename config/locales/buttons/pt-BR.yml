@@ -1,10 +1,11 @@
 "pt-BR":
   buttons:
-    submit: Salvar
-    home_page: Página Principal
-    back: Voltar
-    log_in: Entrar
-    add: Criar %{model}
-    edit: Editar
-    delete: Deletar
-    send_email: Enviar Email
+    submit_button: Salvar
+    home_page_button: Página Principal
+    back_button: Voltar
+    log_in_button: Entrar
+    add_model_button: Criar %{model}
+    edit_button: Editar
+    delete_button: Deletar
+    send_email_button: Enviar Email
+    close_button: Close

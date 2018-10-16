@@ -1,0 +1,14 @@
+en:
+  labels:
+    creating_label: New %{model}
+    listing_label: Listing %{model}
+    editing_label: Editing %{model}
+    remember_me_label: Remember me
+    sign_in_label: Sign In
+    sign_up_label: Sign Up
+    recipient_label: Recipient
+    subject_label: Subject
+    message_label: Message
+    new_message_to_label: New message to %{name}
+    send_label: Send
+    errors_label: Errors

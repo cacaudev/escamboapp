@@ -23,7 +23,7 @@ class ApplicationController < ActionController::Base
   end
   
   def user_not_authorized
-    flash[:alert] = t('messages.user_not_authorized')
+    flash[:alert] = t('alert.user_not_authorized_alert')
     redirect_to(request.referrer || root_path)
   end
 end

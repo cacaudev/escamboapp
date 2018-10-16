@@ -6,8 +6,8 @@
           <h3 class="panel-title"><%= t('messages.sign_in_label') %></h3>
         </div>
         <div class="panel-body">
-          <%= form_for(resource, as: resource_name, url: session_path(resource_name,
-            role: "form")) do |f| %>
+          <%= form_for(resource, as: resource_name, 
+            url: session_path(resource_name, role: "form")) do |f| %>
             <fieldset>
               <div class="form-group">
                 <%= f.email_field :email, autofocus: true, class:"form-control", 
@@ -21,12 +21,12 @@
                 <div class="checkbox">
                   <label>
                     <%= f.check_box :remember_me %>
-                    <%= t('messages.remember_me_label') %>
+                    <%= t('labels.remember_me_label') %>
                   </label>
                 </div>
               <% end -%>
               <!-- Change this to a button or input when using this as a form -->
-              <%= f.submit t('buttons.log_in'), class: "btn btn-lg btn-success btn-block" %>
+              <%= f.submit t('buttons.log_in_button'), class: "btn btn-lg btn-success btn-block" %>
               <br>
               <%#= render "admins/shared/links" %>
             </fieldset>

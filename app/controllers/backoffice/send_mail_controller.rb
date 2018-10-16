@@ -13,10 +13,10 @@ class Backoffice::SendMailController < ApplicationController
                                params[:'recipient-text'],
                                params[:'subject-text'],
                                params[:'message-text']).deliver_now
-      @notify_message = "Email enviado com sucesso."
+      @notify_message = t('alerts.email_sent_sucessfully_alert')
       @notify_flag = "success"
     rescue
-      @notify_message = "Erro ao enviar email. Tente novamente."
+      @notify_message = t('alerts.email_error_alert')
       @notify_flag = "error"
     end
                              
