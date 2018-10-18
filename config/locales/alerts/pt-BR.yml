@@ -3,6 +3,7 @@
     confirm_alert: Tem certeza?
     confirm_with_alert: Tem certeza que deseja excluir (<b>%{item}</b>)?
     created_alert: Novo(a) %{item} criado com sucesso.
+    created_error_alert: Erro ao tentar criar %{item}.
     updated_alert: Item %{item} atualizado com sucesso.
     deleted_alert: Item %{item} excluído com sucesso.
     sign_in_succesfull_alert: Conectado com sucesso.

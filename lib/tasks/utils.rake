@@ -10,6 +10,7 @@ namespace :utils do
     Rake::Task['db:migrate'].execute
     Rake::Task['db:seed'].execute
     Rake::Task['utils:generate_admins'].execute
+    Rake::Task['utils:generate_ads'].execute
     puts "Recreating DB...[OK]"
   end
 
@@ -26,6 +27,20 @@ namespace :utils do
       )
     end
     puts "Registering fake Admins ...[OK]"
+  end
+  
+  desc "Add fake ads"
+  task generate_ads: :environment do
+    puts "Registering fake ads..."
+    10.times do
+      Ad.create!(
+        title: Faker::Lorem.sentence([2,3,4,5].sample),
+        description: LeroleroGenerator.paragraph(Random.rand(3)),
+        member_id: Member.all.sample,
+        category_id: Category.all.sample
+      )
+    end
+    puts "Registering fake ads...[OK]"
   end
 
 end

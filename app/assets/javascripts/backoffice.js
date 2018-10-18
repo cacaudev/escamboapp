@@ -13,11 +13,11 @@ $.rails.allowAction = function(element) {
     message: message,
     buttons: {
         confirm: {
-            label: 'Sim',
+            label: 'Yes',
             className: 'btn-success'
         },
         cancel: {
-            label: 'Não',
+            label: 'Cancel',
             className: 'btn-danger'
         }
     },

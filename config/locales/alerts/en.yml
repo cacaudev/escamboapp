@@ -3,6 +3,7 @@ en:
     confirm_alert: Are you sure?
     confirm_with_alert: Are you sure you want to delete (<b>%{item}</b>)?
     created_alert: New %{item} created successfully.
+    created_error_alert: Error trying to create %{item}.
     updated_alert: Item %{item} updated successfully.
     deleted_alert: Item %{item} deleted successfully.
     sign_in_succesfull_alert: Signed in successfully.

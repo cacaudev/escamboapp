@@ -9,3 +9,5 @@ en:
     delete_button: Delete
     send_email_button: Send Mail
     close_button: Close
+    yes_button: Yes
+    cancel_button: Cancel

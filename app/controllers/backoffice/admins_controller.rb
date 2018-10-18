@@ -26,6 +26,7 @@ class Backoffice::AdminsController < BackofficeController
   end
 
   def edit
+    # Uses set_admin to get admin
   end
 
   def update
@@ -62,16 +63,18 @@ class Backoffice::AdminsController < BackofficeController
       end
 
       if @admin.blank?
+        # For create action
         params.require(:admin)
           .permit(:name, :email, :role, :password, :password_confirmation)
       else
+        # For edit, update and destroy actions
         params.require(:admin).permit(policy(@admin).permitted_attributes)
       end
     end
 
     def password_blank?
-      passwd = params.dig(:password).blank? &&
-      passwd_confirmation = params.dig(:password_confirmation).blank?
+      params.dig(:password).blank? &&
+      params.dig(:password_confirmation).blank?
     end
 
 end

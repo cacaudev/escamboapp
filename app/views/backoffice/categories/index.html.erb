@@ -1,7 +1,7 @@
 <h1 class="page-header"><%= @categories.model_name.human(count: 2) %></h1>
 <div class="panel panel-default">
   <div class="panel-heading">
-    <%= t('messages.listing_label', model: @categories.model_name.human(count: 2)) %>
+    <%= t('labels.listing_label', model: @categories.model_name.human(count: 2)) %>
     
     <%= link_to new_backoffice_category_path do %>
       <button type="button" class="btn btn-success btn-circle pull-right"
@@ -36,7 +36,8 @@
                     <% end %>
                     <%= link_to backoffice_category_path(category.id), 
                       method: :delete, 
-                      data: { confirm: I18n.t('messages.confirm_with_alert', item: category.description) } do %>
+                      data: { confirm: I18n.t('alerts.confirm_with_alert',
+                      item: category.description) } do %>
                       <button type="button" class="btn btn-danger 
                         btn-circle">
                         <i class="fa fa-trash-o"></i>

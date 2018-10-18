@@ -69,6 +69,8 @@ group :development, :test do
   gem 'rails-erd'
   # Fake info generator
   gem 'faker'
+  # Fake sentences or paragraphs 
+  gem 'lerolero_generator'
   # A Ruby static code analyzer and formatter,
   # based on the community Ruby style guide.
   gem 'rubocop', '~> 0.59.2', require: false

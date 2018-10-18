@@ -12,10 +12,11 @@ class Backoffice::CategoriesController < BackofficeController
   def create
     @category = CategoryService.create(params_category)
     if @category.errors.any?
-      render :new
+      render :new,
+      notice: I18n.t('alerts.created_error_alert', item: @category.description)
     else
       redirect_to backoffice_categories_path, 
-      notice: I18n.t('messages.created_alert', item: @category.description)
+      notice: I18n.t('alerts.created_alert', item: @category.description)
     end
   end
 
@@ -25,7 +26,7 @@ class Backoffice::CategoriesController < BackofficeController
   def update
     if @category.update(params_category)
       redirect_to backoffice_categories_path, 
-        notice: I18n.t('messages.updated_alert', item: @category.description)
+        notice: I18n.t('alerts.updated_alert', item: @category.description)
     else
       render :edit
     end
@@ -35,7 +36,7 @@ class Backoffice::CategoriesController < BackofficeController
     category_description = @category.description
     if @category.destroy
       redirect_to backoffice_categories_path, 
-        notice: I18n.t('messages.deleted_alert', item: category_description)
+        notice: I18n.t('alerts.deleted_alert', item: category_description)
     else
       render :index
     end

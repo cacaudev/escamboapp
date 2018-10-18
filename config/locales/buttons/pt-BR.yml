@@ -8,4 +8,6 @@
     edit_button: Editar
     delete_button: Deletar
     send_email_button: Enviar Email
-    close_button: Close
+    close_button: Fechar
+    yes_button: Sim
+    cancel_button: Cancelar
