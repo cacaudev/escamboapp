@@ -34,7 +34,7 @@ namespace :utils do
     puts "Registering fake ads..."
     10.times do
       Ad.create!(
-        title: Faker::Lorem.sentence([2,3,4,5].sample),
+        title: Faker::Commerce.product_name,
         description: LeroleroGenerator.paragraph(Random.rand(3)),
         member_id: Member.all.sample,
         category_id: Category.all.sample

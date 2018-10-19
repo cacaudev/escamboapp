@@ -1,5 +1,5 @@
-# Trade App
-  Trade app made in Ruby on Rails for an Udemy Course.
+# Basic Trade App
+  Trade app made in Ruby on Rails from an Udemy Course.
 
 ## Ruby version
   ```sh
@@ -11,7 +11,6 @@
   ```
 ## Entity-Relation Diagram (ERD)
 ![alt text](https://github.com/cacaudev/escamboapp/blob/master/erd.png)
-
 ## Configuration
   Running the server:
   ```sh
