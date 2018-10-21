@@ -30,6 +30,8 @@ gem 'sqlite3'
 gem 'bootstrap_sb_admin_base_v2'
 # Minimal authorization through OO design and pure Ruby classes
 gem "pundit"
+# Integration of RubyMoney - Money with Rails
+gem 'money-rails'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
