@@ -37,7 +37,8 @@ namespace :utils do
         title: Faker::Commerce.product_name,
         description: LeroleroGenerator.paragraph(Random.rand(3)),
         member_id: Member.all.sample,
-        category_id: Category.all.sample
+        category_id: Category.all.sample,
+        price: "#{Random.rand(200)}.#{Random.rand(99)}"
       )
     end
     puts "Registering fake ads...[OK]"
