@@ -9,6 +9,7 @@ class Category < ActiveRecord::Base
   # Callbacks
 
   # Scopes
+  scope :order_by_description, -> { order(:description) }
 
   # Class Methods
 
