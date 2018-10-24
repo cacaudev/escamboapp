@@ -1,9 +1,8 @@
 //= require bootstrap_sb_admin_base_v2
-//= require notifyjs
 //= require bootbox
+//= require toastr
 
 /* Sobrescreve  data-confirm do Rails */
-
 $.rails.allowAction = function(element) {
   var message = element.attr('data-confirm');
   if (!message) { return true; }

@@ -11,6 +11,9 @@ class ApplicationController < ActionController::Base
   
   # Set Layout
   layout :layout_by_resource
+  
+  # Toastr alerts
+  add_flash_types :success, :danger, :info
 
   protected
   
@@ -25,5 +28,7 @@ class ApplicationController < ActionController::Base
   def user_not_authorized
     flash[:alert] = t('alert.user_not_authorized_alert')
     redirect_to(request.referrer || root_path)
+    #danger: t('alert.user_not_authorized_alert') 
+    
   end
 end

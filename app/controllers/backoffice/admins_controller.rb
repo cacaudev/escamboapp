@@ -18,8 +18,9 @@ class Backoffice::AdminsController < BackofficeController
   def create
     @admin = Admin.new(params_admin)
     if @admin.save
-      redirect_to backoffice_admins_path, 
-        notice: t('alerts.created_alert', item: @admin.email)
+      redirect_to backoffice_admins_path,
+        success: t('alerts.created_alert', item: @admin.email)
+        #notice: t('alerts.created_alert', item: @admin.email)
     else
       render :new
     end
@@ -32,8 +33,9 @@ class Backoffice::AdminsController < BackofficeController
   def update
     if @admin.update(params_admin)
       AdminMailer.update_email(current_admin, @admin).deliver_now
-      redirect_to backoffice_admins_path, 
-        notice: t('alerts.updated_alert', item: @admin.email)
+      redirect_to backoffice_admins_path,
+        success: t('alerts.updated_alert', item: @admin.email)
+        #notice: t('alerts.updated_alert', item: @admin.email)
     else
       render :edit
     end
@@ -44,8 +46,9 @@ class Backoffice::AdminsController < BackofficeController
     admin_email = @admin.email
 
     if @admin.destroy
-      redirect_to backoffice_admins_path, 
-        notice: t('alerts.deleted_alert', item: admin_email)
+      redirect_to backoffice_admins_path,
+        success: t('alerts.deleted_alert', item: admin_email)
+        #notice: t('alerts.deleted_alert', item: admin_email)
     else
       render :index
     end

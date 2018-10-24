@@ -41,15 +41,17 @@
       <!-- /#page-wrapper -->
     </div>
     <!-- /#wrapper -->
-  <% if notice %>
+  <%= render :partial => 'layouts/backoffice_shared/flash_messages', :flash => flash %>
+  <!--<%# if notice %>
     <script>
-      $.notify('<%= notice %>', 'success');
+      $.notify('<%#= notice %>', 'success');
     </script>
-  <% end %>
-  <% if alert %>
+  <%# end %>
+  <%# if alert %>
     <script>
-      $.notify("<%= alert %>", "error");
+      $.notify("<%#= alert %>", "error");
     </script>
-  <% end %>
+  <%# end %>
+  -->
 </body>
 </html>

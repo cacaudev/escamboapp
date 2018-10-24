@@ -8,7 +8,7 @@ source 'https://rails-assets.org' do
   # Bootstrap
   gem 'rails-assets-bootstrap', '3.3.7'
   # NotifyJS
-  gem 'rails-assets-notifyjs'
+  # gem 'rails-assets-notifyjs'
   # BootboxJS
   gem 'rails-assets-bootbox'
 end
@@ -34,6 +34,9 @@ gem "pundit"
 gem 'money-rails'
 # Easy file attachment management for ActiveRecord 
 gem 'paperclip', '>= 5.2.0'
+
+
+gem 'toastr-rails'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
