@@ -16,6 +16,14 @@
   ```sh
   $ foreman start
   ```
+## Dependencies
+  * ImageMagick (https://www.imagemagick.org)  
+  For PaperClip gem (images storage and manipulation)  
+  **OBS: this process is already included on dockerfile**
+  ```
+  $ sudo apt-get update
+  $ sudo apt-get install imagemagick
+  ```
 ## Database creation
   ```sh
   $ rake db:create db:migrate db:seed
@@ -24,7 +32,7 @@
   Only in development (will call all tasks above together):
   ```sh
   $ rake utils:rebuild_db  
-  ```
+  ```  
 ## Docker Configuration
   To build image and create container:
   ```sh
@@ -32,9 +40,9 @@
   $ docker-compose up --build  
   Open app on browser: https://<virtual-machine-ip>:3000
   ```
-  OBS: If "Migrations are pending, run bin/rake db:migrate RAILS_ENV=development" error occur:  
-
-    Open two terminal instances:
+  **OBS: If "Migrations are pending, run bin/rake db:migrate RAILS_ENV=development" error occur:**  
+  
+    Open two terminal instances on project folder:
     Run on terminal 1:  (to bootstrap app)  
     $ docker-compose up  
     Run on terminal 2:  (will open shell)  

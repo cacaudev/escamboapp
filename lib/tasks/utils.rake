@@ -11,9 +11,10 @@ namespace :utils do
     Rake::Task['db:seed'].execute
     Rake::Task['utils:generate_admins'].execute
     Rake::Task['utils:generate_ads'].execute
+    Rake::Task['utils:generate_members'].execute
     puts "Recreating DB...[OK]"
   end
-
+  ######################################################################
   desc "Add fake admins"
   task generate_admins: :environment do
     puts "Registering fake Admins..."
@@ -28,7 +29,7 @@ namespace :utils do
     end
     puts "Registering fake Admins ...[OK]"
   end
-  
+  ######################################################################
   desc "Add fake ads"
   task generate_ads: :environment do
     puts "Registering fake ads..."
@@ -45,5 +46,19 @@ namespace :utils do
     end
     puts "Registering fake ads...[OK]"
   end
+  ######################################################################
+  desc "Add fake members"
+  task generate_members: :environment do
+    puts "Registering fake Members..."
+    100.times do
+      Member.create!(
+        email: Faker::Internet.email,
+        password: "123456",
+        password_confirmation: "123456"
+      )
+    end
+    puts "Registering fake Members ...[OK]"
+  end
+
 
 end
