@@ -1,18 +1,19 @@
 namespace :utils do
   
-  desc "Rebuild Db faster on development mode"
-  task rebuild_db: :environment do
+  desc "Setup Development"
+  task setup_dev: :environment do
     raise "Not allowed to run on production" if Rails.env.production?
     
-    puts "Recreating DB..."
+    puts "Setup development..."
+    #puts "Dropping BD...#{%x(rake db:drop)}" -->can be done this way or:
     Rake::Task['db:drop'].execute
     Rake::Task['db:create'].execute
     Rake::Task['db:migrate'].execute
     Rake::Task['db:seed'].execute
     Rake::Task['utils:generate_admins'].execute
-    Rake::Task['utils:generate_ads'].execute
     Rake::Task['utils:generate_members'].execute
-    puts "Recreating DB...[OK]"
+    Rake::Task['utils:generate_ads'].execute
+    puts "Setup development...[OK]"
   end
   ######################################################################
   desc "Add fake admins"

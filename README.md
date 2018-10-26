@@ -31,8 +31,10 @@
 ## Database initialization
   Only in development (will call all tasks above together):
   ```sh
-  $ rake utils:rebuild_db  
+  $ rake utils:setup_dev  
   ```  
+  **OBS: if "Couldn't drop db/development.sqlite3" error occur:**  
+    Delete development.sqlite3 file on db folder and run the command above again
 ## Docker Configuration
   To build image and create container:
   ```sh
