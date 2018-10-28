@@ -32,3 +32,13 @@ Admin.create!(
 )
 
 puts"Registering Default Admin...[OK]"
+
+puts "Registering Default Member..."
+
+Member.create!(
+  email: "member@member.com",
+  password: "123456",
+  password_confirmation: "123456"
+)
+
+puts"Registering Default Member...[OK]"
