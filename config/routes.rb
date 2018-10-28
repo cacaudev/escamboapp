@@ -10,6 +10,9 @@ Rails.application.routes.draw do
 
   namespace :site do
     get 'home', to: 'home#index'
+    namespace :profile do 
+      resources :dashboard, only: [:index]
+    end
   end
 
   # asked to put new ruby 1.9 hash syntax insted of :skip => :registrations

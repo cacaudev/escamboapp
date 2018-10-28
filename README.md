@@ -9,8 +9,6 @@
   ```sh
   Rails 4.2.5
   ```
-## Entity-Relation Diagram (ERD)
-![alt text](https://github.com/cacaudev/escamboapp/blob/master/erd.png)
 ## Configuration
   Running the server:
   ```sh
@@ -34,7 +32,14 @@
   $ rake utils:setup_dev  
   ```  
   **OBS: if "Couldn't drop db/development.sqlite3" error occur:**  
-    Delete development.sqlite3 file on db folder and run the command above again
+    Delete development.sqlite3 file on db folder and run the command above again  
+
+## Entity-Relation Diagram (ERD)
+![alt text](https://github.com/cacaudev/escamboapp/blob/master/erd.png)
+
+## Nested Controllers Diagram
+![alt text](https://github.com/cacaudev/escamboapp/blob/master/NestedControllerDiagram.png)
+
 ## Docker Configuration
   To build image and create container:
   ```sh
