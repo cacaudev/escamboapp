@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 20181022011422) do
     t.integer  "price_cents"
     t.string   "picture_file_name"
     t.string   "picture_content_type"
-    t.integer  "picture_file_size"
+    t.integer  "picture_file_size",    limit: 8
     t.datetime "picture_updated_at"
   end
 
