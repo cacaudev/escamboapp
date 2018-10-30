@@ -3,10 +3,12 @@ namespace :utils do
   desc "Setup Development"
   task setup_dev: :environment do
     raise "Not allowed to run on production" if Rails.env.production?
+    images_path = Rails.root.join('public','system')
     
     puts "Setup development..."
     #puts "Dropping BD...#{%x(rake db:drop)}" -->can be done this way or:
     Rake::Task['db:drop'].execute
+    puts "Deleting images from paperclip folder...#{%x(rm -rf #{images_path})}" 
     Rake::Task['db:create'].execute
     Rake::Task['db:migrate'].execute
     Rake::Task['db:seed'].execute
