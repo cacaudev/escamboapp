@@ -16,11 +16,14 @@
   ```
 ## Dependencies
   * ImageMagick (https://www.imagemagick.org)  
-  For PaperClip gem (images storage and manipulation)  
-  **OBS: this process is already included on dockerfile**
+  For PaperClip gem (images storage and manipulation) 
+  * Graphviz (https://www.graphviz.org)  
+  For Erd gem (generate ERD diagrams)  
+  **OBS: these processes are already included on dockerfile**
   ```
   $ sudo apt-get update
-  $ sudo apt-get install imagemagick
+  $ sudo apt-get install -y imagemagick aptitude
+  $ sudo aptitude install -y graphviz
   ```
 ## Database creation
   ```sh
@@ -31,7 +34,7 @@
   ```sh
   $ rake dev:setup  
   ```  
-  **OBS: if "Couldn't drop db/development.sqlite3" error occur:**  
+  OBS: if **"Couldn't drop db/development.sqlite3"** error occur:  
     Delete development.sqlite3 file on db folder and run the command above again  
 
 ## Entity-Relation Diagram (ERD)
@@ -47,7 +50,8 @@
   $ docker-compose up --build  
   Open app on browser: https://<virtual-machine-ip>:3000
   ```
-  **OBS: If "Migrations are pending, run bin/rake db:migrate RAILS_ENV=development" error occur:**  
+  OBS: If **"Migrations are pending, run bin/rake db:migrate RAILS_ENV=development"** 
+  error occur: 
   
     Open two terminal instances on project folder:
     Run on terminal 1:  (to bootstrap app)  

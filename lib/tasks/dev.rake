@@ -59,9 +59,8 @@ namespace :dev do
         member_id: Member.first,
         category_id: Category.all.sample,
         price: "#{Random.rand(200)}.#{Random.rand(99)}",
-        picture: File.new(Rails.root.join('public',         'templates',
-          'images-for-ads', 
-          "#{Random.rand(9)}.jpg"), 'r')
+        picture: File.new(Rails.root.join('public', 'templates',
+          'images-for-ads', "#{Random.rand(9)}.jpg"), 'r')
       )
     end
     
