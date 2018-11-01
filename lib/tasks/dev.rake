@@ -54,10 +54,10 @@ namespace :dev do
     # Add 5 ads for default member for testing purpose
     5.times do
       Ad.create!(
-        title:Faker::Commerce.product_name,
+        title: Faker::Commerce.product_name,
         description: LeroleroGenerator.paragraph(Random.rand(3)),
-        member_id: Member.first,
-        category_id: Category.all.sample,
+        member: Member.first,
+        category: Category.all.sample,
         price: "#{Random.rand(200)}.#{Random.rand(99)}",
         picture: File.new(Rails.root.join('public', 'templates',
           'images-for-ads', "#{Random.rand(9)}.jpg"), 'r')
@@ -71,8 +71,8 @@ namespace :dev do
       Ad.create!(
         title: Faker::Commerce.product_name,
         description: LeroleroGenerator.paragraph(Random.rand(3)),
-        member_id: Member.all.sample,
-        category_id: Category.all.sample,
+        member: Member.all.sample,
+        category: Category.all.sample,
         price: "#{Random.rand(200)}.#{Random.rand(99)}",
         picture: File.new(Rails.root.join('public', 'templates',
           'images-for-ads', "#{Random.rand(9)}.jpg"), 'r')

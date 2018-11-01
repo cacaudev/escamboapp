@@ -59,6 +59,6 @@
     Run on terminal 2:  (will open shell)  
     $ docker-compose exec web bash  
     Inside shell run:  
-    $ rake utils:rebuild_db  
+    $ rake dev:setup
     $ exit  
     Open https://<virtual-machine-ip>:3000 again ☕.  
