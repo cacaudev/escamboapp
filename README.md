@@ -14,6 +14,10 @@
   ```sh
   $ foreman start
   ```
+  Running the server on docker: (after run docker-compose build the first time)
+  ```sh
+  $ docker-compose up
+  ```
 ## Dependencies
   * ImageMagick (https://www.imagemagick.org)  
   For PaperClip gem (images storage and manipulation) 
