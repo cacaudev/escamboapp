@@ -10,6 +10,11 @@
   Rails 4.2.5
   ```
 ## Configuration
+  Installing modules:
+  ```sh
+  $ cd escamboapp
+  $ bundle install
+  ```
   Running the server:
   ```sh
   $ foreman start
@@ -25,9 +30,12 @@
   For Erd gem (generate ERD diagrams)  
   **OBS: these processes are already included on dockerfile**
   ```
-  $ sudo apt-get update
-  $ sudo apt-get install -y imagemagick aptitude
-  $ sudo aptitude install -y graphviz
+  $ apt-get update
+  $ apt-get install -y build-essential
+  $ apt-get install -y libsqlite3-dev nodejs
+  $ apt-get install -y imagemagick aptitude
+  $ aptitude install -y graphviz
+  
   ```
 ## Database creation
   ```sh
